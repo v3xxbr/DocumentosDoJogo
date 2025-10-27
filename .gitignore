@@ -1,0 +1,13 @@
+# Pastas temporárias do Unity
+Library/
+Temp/
+Obj/
+Logs/
+.vs/
+
+# Arquivos de projeto do Unity
+*.csproj
+*.sln
+
+# Arquivos de build
+Build/
