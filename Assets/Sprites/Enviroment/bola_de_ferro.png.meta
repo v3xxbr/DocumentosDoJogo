@@ -1,0 +1,543 @@
+fileFormatVersion: 2
+guid: fb9390c3907a2134cad686fefd4f6e0e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bola_de_ferro_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 206
+        width: 27
+        height: 49
+      alignment: 9
+      pivot: {x: 0.9816963, y: 0.97345716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4334f712418ff5941899615080cdbdc5
+      internalID: 1617784117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 205
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.98384666, y: 0.97398806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7fc36efc28d954b9658084770257b1
+      internalID: -917878248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 204
+        width: 20
+        height: 51
+      alignment: 9
+      pivot: {x: 0.9714287, y: 0.9751129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e17fbdfe70a8fe4c8707c3fe27e005d
+      internalID: -597128057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 202
+        width: 16
+        height: 53
+      alignment: 9
+      pivot: {x: 0.97029495, y: 0.9794732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8895ea3a54d434994bc9d1731cd6e0
+      internalID: -1568956516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 202
+        width: 16
+        height: 53
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7999c10d2498a84380c69f6249e25f1
+      internalID: -1266784317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 138
+        width: 16
+        height: 53
+      alignment: 9
+      pivot: {x: 0.031104207, y: 0.9867709}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d49ec49a1bbb74b8406f8fdf804095
+      internalID: 821305640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 140
+        width: 20
+        height: 51
+      alignment: 9
+      pivot: {x: 0.024468232, y: 0.9886038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e51cb07235c0a44387ec9b0ec031121
+      internalID: 807694433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 141
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.019882202, y: 0.99039763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfa96b5bc99da147897b70a7179be68
+      internalID: 983768827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_8
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 142
+        width: 27
+        height: 49
+      alignment: 9
+      pivot: {x: 0.016354032, y: 0.9871063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cf7e31d869f9d4fa1290b6067f8c64
+      internalID: -977224696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_9
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 142
+        width: 27
+        height: 49
+      alignment: 9
+      pivot: {x: 0.020371048, y: 0.98542535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bb0bbf00c77f34f8b7cb55e73c2f9c
+      internalID: -558808125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 77
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.020399094, y: 0.990385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d2cc03622dbd7439a79b59cd8f0f46
+      internalID: 1107775011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_11
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 76
+        width: 20
+        height: 51
+      alignment: 9
+      pivot: {x: 0.022317505, y: 0.99142337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e770d65662cbb449677ba3849ea56f
+      internalID: 1114684440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_12
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 74
+        width: 16
+        height: 53
+      alignment: 9
+      pivot: {x: 0.018070221, y: 0.99210155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75fc2576b2ddaa4495851cb021e49d8
+      internalID: -2120594560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_13
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 74
+        width: 16
+        height: 53
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43c4fa2aa6c4f64e9958ea6dead98c2
+      internalID: 707202611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_14
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 74
+        width: 16
+        height: 53
+      alignment: 9
+      pivot: {x: 0.96972466, y: 0.9892859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a90c3275f4ba944a7b94691c3e033c
+      internalID: -1654409933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 20
+        height: 51
+      alignment: 9
+      pivot: {x: 0.9785056, y: 0.9795822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f530544e97f8bec4ead6cf59dc1a2f8a
+      internalID: 1405275601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 13
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.97933227, y: 0.98710763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fcfa6105fa8c74282e83fab2f6c36e
+      internalID: 64206378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_ferro_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 14
+        width: 27
+        height: 49
+      alignment: 9
+      pivot: {x: 0.9853222, y: 0.9901945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab426b86c5b5ce44eb8f60fe5793f044
+      internalID: -1263228739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bola_de_ferro_0: 1617784117
+      bola_de_ferro_1: -917878248
+      bola_de_ferro_10: 1107775011
+      bola_de_ferro_11: 1114684440
+      bola_de_ferro_12: -2120594560
+      bola_de_ferro_13: 707202611
+      bola_de_ferro_14: -1654409933
+      bola_de_ferro_15: 1405275601
+      bola_de_ferro_16: 64206378
+      bola_de_ferro_17: -1263228739
+      bola_de_ferro_2: -597128057
+      bola_de_ferro_3: -1568956516
+      bola_de_ferro_4: -1266784317
+      bola_de_ferro_5: 821305640
+      bola_de_ferro_6: 807694433
+      bola_de_ferro_7: 983768827
+      bola_de_ferro_8: -977224696
+      bola_de_ferro_9: -558808125
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
