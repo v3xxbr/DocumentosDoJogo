@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
     int currentMoment;
-    [SerializeField]float transitionTime = 1f;
+    [SerializeField] GameObject UIprefab; 
+    [SerializeField] float transitionTime = 1f;
 
     void Start()
     {
+        gameUI.createUI(UIprefab);
         currentMoment = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -23,9 +25,16 @@ public class EndLevel : MonoBehaviour
 
     IEnumerator loadNewLevel(int m)
     {
+        background currentbg = FindObjectOfType<background>();
+
         Animator anim = gameUI.objectt.animtransition;
+
         anim.SetBool("start", true);
         yield return new WaitForSeconds(transitionTime);
+
+        if (background.level2 == false)
+            currentbg.GetComponent<background>().updatingBackground();
+
         SceneManager.LoadScene(m);
         anim.SetBool("start", false);
     }

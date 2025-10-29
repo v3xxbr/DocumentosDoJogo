@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1fe4da533fb474084530c952873a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animtransition: {fileID: 0}
+  UIprefab: {fileID: 1766973265808156319, guid: f5a407af5d0129645ae95cde78ea4435, type: 3}
+  transitionTime: 1
 --- !u!61 &1824634904871789895
 BoxCollider2D:
   m_ObjectHideFlags: 0

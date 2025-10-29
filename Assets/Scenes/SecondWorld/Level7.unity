@@ -409,7 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666d8b50592aa9941b14373218e02c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stockedSensor: {fileID: 0}
   speed: 3.4
   targets:
   - {fileID: 1757742924}

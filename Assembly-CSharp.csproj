@@ -56,18 +56,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\hitScripts\walkSpin.cs" />
     <Compile Include="Assets\Scripts\hitScripts\spawner.cs" />
     <Compile Include="Assets\Scripts\hitScripts\faillingPlataform.cs" />
+    <Compile Include="Assets\background.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\breakBarrier.cs" />
     <Compile Include="Assets\Scripts\hitScripts\followPlayer.cs" />
+    <Compile Include="Assets\Scripts\hitScripts\followPlayerX.cs" />
     <Compile Include="Assets\Scripts\sensorScripts\moveSensor.cs" />
     <Compile Include="Assets\Scripts\hitScripts\crusherPillar.cs" />
     <Compile Include="Assets\Scripts\hitScripts\shooter.cs" />
     <Compile Include="Assets\Scripts\hitScripts\quickSand.cs" />
     <Compile Include="Assets\Scripts\hitScripts\upAndDown.cs" />
+    <Compile Include="Assets\Scripts\pauseMenu.cs" />
+    <Compile Include="Assets\finalDirector.cs" />
     <Compile Include="Assets\Scripts\move.cs" />
     <Compile Include="Assets\Inputs\playerIActions.cs" />
+    <Compile Include="Assets\Scripts\hitScripts\spear.cs" />
     <Compile Include="Assets\Scripts\hitScripts\moveSpin.cs" />
     <Compile Include="Assets\Scripts\sensorScripts\Sensor.cs" />
     <Compile Include="Assets\Scripts\deathCount.cs" />
@@ -75,6 +81,7 @@
     <Compile Include="Assets\Scripts\levelSelect.cs" />
     <Compile Include="Assets\Scripts\EndLevel.cs" />
     <Compile Include="Assets\Scripts\sensorScripts\button.cs" />
+    <Compile Include="Assets\Inputs\mainMenuInputs.cs" />
     <Compile Include="Assets\Scripts\mainMenu.cs" />
     <Compile Include="Assets\Scripts\gameUI.cs" />
   </ItemGroup>

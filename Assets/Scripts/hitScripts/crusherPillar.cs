@@ -22,6 +22,10 @@ public class crusherPillar : MonoBehaviour
     void Start()
     {
         sensor = GetComponent<Sensor>();
+
+        if (sensor == null)
+            sensor = GetComponentInChildren<Sensor>();
+
         rbHead = head.GetComponent<Rigidbody2D>();
         originalPos = rbHead.position;
 
@@ -40,7 +44,6 @@ public class crusherPillar : MonoBehaviour
     {
         isGrowing = true;
 
-        head.tag = "Hit";
         //primeiro pegamos o valor da posição local do objeto, depois somamos seu y com o valor da velocidade de crescimento de modo lento (por meio do Time.deltaTime)
         while (Vector2.Distance(rbHead.position, finalPos.transform.position) > 0.01f)
         {

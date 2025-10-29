@@ -12,12 +12,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - spawnPlayer
   - spawnEL
-  - 
+  - Ground
   - Hit
   - playerLayer
   - 
@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 345528215
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

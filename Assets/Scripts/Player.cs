@@ -13,13 +13,18 @@ public class Player : MonoBehaviour
     Animator anim;
 
     [Header("Attributes")]
-    public static float speed=3.5f;
-    float jumpForce=4f;
+    public static float speed = 3.5f;
+    float jumpForce = 4f;
 
     [Header("StagesVars")]
     bool isJumping;
 
-    private Vector2 moveInput;
+    public Vector2 moveInput;
+
+    [Header("Foot")]
+    [SerializeField]private Transform foot;
+    [SerializeField]private float footRadius=0.2f;
+    [SerializeField]private LayerMask ground;
 
     public enum stages{
         Idle,
@@ -34,6 +39,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentStage = stages.Idle;
+
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -42,13 +48,12 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
-
         Animations();
     }
 
     public void Update()
     {
-        Dead();
+        isJumping = !Physics2D.OverlapCircle(foot.position, footRadius, ground);
     }
 
     public void Move(InputAction.CallbackContext value)
@@ -84,27 +89,30 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
-        if (currentStage == stages.Dead)
-        {
-            gameObject.SetActive(false);
-            ++deathCount.deathTimes;
-            deathCount.itsover = true;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            gameObject.SetActive(true);
-        }
+       
+        gameObject.SetActive(false);
+        ++deathCount.deathTimes;
+        deathCount.itsover = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameObject.SetActive(true);
+       
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Hit") || other.gameObject.CompareTag("Hit"))
         {
-            isJumping=false;
+            Dead();
         }
+    }
 
-        else if(other.gameObject.layer == LayerMask.NameToLayer("Hit") || other.gameObject.CompareTag("Hit"))
+    private void OnDrawGizmos()
+    {
+        if(foot != null)
         {
-            currentStage = stages.Dead;
-        }
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(foot.position, footRadius);
+        }   
     }
 
     private void flipSprite()

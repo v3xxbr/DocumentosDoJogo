@@ -7,10 +7,11 @@ public class move : MonoBehaviour
     private Sensor sensor;
     private Rigidbody2D rb;
     public Transform targetobj;
+    Vector2 direction;
     public float speed;
 
     bool moved=false;
-    public int direction;
+    public int dir;
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +34,33 @@ public class move : MonoBehaviour
 
     IEnumerator moving()
     {
-        switch (direction)
+        switch (dir)
         {
-            case 1: rb.AddForce(Vector2.up * Time.deltaTime, ForceMode2D.Force); break;
-            case 2: rb.AddForce(Vector2.right * Time.deltaTime, ForceMode2D.Force); break;
-            case 3: rb.AddForce(Vector2.down * Time.deltaTime, ForceMode2D.Force); break;
-            case 4: rb.AddForce(Vector2.left * Time.deltaTime, ForceMode2D.Force); break;
+            case 1: direction = Vector2.up; break;
+            case 2: direction = Vector2.right; break;
+            case 3: direction = Vector2.down; break;
+            case 4: direction = Vector2.left; break;
         }
 
         if (targetobj != null)
         {
             while (Vector2.Distance(transform.position, targetobj.position) > 0.01f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetobj.position, speed * Time.deltaTime);
-                yield return null;
+                Vector2 MovePos = Vector2.MoveTowards(rb.position, targetobj.position, speed * Time.fixedDeltaTime);
+                rb.MovePosition(MovePos);
+                yield return new WaitForFixedUpdate();
+            }
+
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        else
+        {
+            while (true)
+            {
+                Vector2 uMove = rb.position + direction * speed * Time.fixedDeltaTime;
+                rb.MovePosition(uMove);
+                yield return new WaitForFixedUpdate();
             }
         }
 

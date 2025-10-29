@@ -33,8 +33,7 @@ public class quickSand : MonoBehaviour
 
         else
         {
-            if (Player.currentStage != Player.stages.Dead)
-                Player.currentStage = Player.stages.Dead;
+            player.GetComponent<Player>().Dead();
         }
     }
 
