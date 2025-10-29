@@ -44,13 +44,13 @@ public class mainMenu : MonoBehaviour
     public void Tutorial()
     {
         if(!creditsImage.activeSelf)
-       tutorialImage.SetActive(true);
+            tutorialImage.SetActive(true);
     }
 
     public void Credits()
     {
         if(!tutorialImage.activeSelf)
-        creditsImage.SetActive(true);
+            creditsImage.SetActive(true);
     }
 
     public void Panels()

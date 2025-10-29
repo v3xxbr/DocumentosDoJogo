@@ -32,10 +32,10 @@ public class EndLevel : MonoBehaviour
         anim.SetBool("start", true);
         yield return new WaitForSeconds(transitionTime);
 
-        if (background.level2 == false)
-            currentbg.GetComponent<background>().updatingBackground();
-
         SceneManager.LoadScene(m);
         anim.SetBool("start", false);
+
+        if (background.level2 == false)
+            currentbg.GetComponent<background>().updatingBackground();
     }
 }

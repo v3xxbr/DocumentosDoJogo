@@ -8,7 +8,7 @@ public class background : MonoBehaviour
 {
     public GameObject[] backgrounds;
     private GameObject currentBackground;
-    public static bool level2;
+    public static bool level2=false;
     public static int n=0;
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class background : MonoBehaviour
         currentBackground = backgrounds[n];
 
         //getbuildindex serve para pegar o index da cena só pelo nome
-        if (SceneManager.GetActiveScene().buildIndex < SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/Level6.unity") - 1)
+        if (SceneManager.GetActiveScene().buildIndex > SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/Level6.unity"))
         {
             ++n;
             level2 = true;

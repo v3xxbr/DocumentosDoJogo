@@ -6,6 +6,7 @@ public class breakBarrier : MonoBehaviour
 {
     public GameObject[] breaker;
     public int n=0;
+    bool fall;
 
     // Start is called before the first frame update
     void Start()
@@ -15,16 +16,26 @@ public class breakBarrier : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Falling();
+        startFall();
     }
 
-    void Falling()
+    void startFall()
     {
-        if(n >= breaker.Length)
+        if(n >= breaker.Length && !fall)
         {
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            GetComponent<Rigidbody2D>().gravityScale = 2f;
+            StartCoroutine(Falling());
         }
+    }
+
+    IEnumerator Falling()
+    {
+        fall = true;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        GetComponent<Rigidbody2D>().gravityScale = 2f;
+
+        yield return new WaitForSeconds(1.1f);
+        gameObject.layer = LayerMask.NameToLayer("Ground");
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
     }
 
     private void OnCollisionEnter2D(Collision2D other)

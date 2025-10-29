@@ -8,11 +8,12 @@ public class pauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuobj;
     public GameObject optionsMenu;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -23,16 +24,21 @@ public class pauseMenu : MonoBehaviour
 
     public void startPause(InputAction.CallbackContext value)
     {
+        if (!value.performed) return;
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player");
+
         if (!pauseMenuobj.activeSelf)
         {
             pauseMenuobj.SetActive(true);
             Time.timeScale = 0f;
+            player.GetComponent<PlayerInput>().actions.Disable();
         }
 
         else
         {
             pauseMenuobj.SetActive(false);
             Time.timeScale = 1f;
+            player.GetComponent<PlayerInput>().actions.Enable();
         }
     }
 
@@ -40,19 +46,12 @@ public class pauseMenu : MonoBehaviour
     {
         pauseMenuobj.SetActive(false);
         Time.timeScale = 1f;
+        player.GetComponent<PlayerInput>().actions.Enable();
     }
 
     public void Options()
     {
-        if (!optionsMenu.activeSelf)
-        {
-            optionsMenu.SetActive(true);
-        }
-
-        else
-        {
-            optionsMenu.SetActive(false);
-        }
+        optionsMenu.SetActive(!optionsMenu.activeSelf);
     }
 
     public void MainManu()

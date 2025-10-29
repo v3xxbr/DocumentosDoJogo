@@ -14,6 +14,7 @@ public class shooter : MonoBehaviour
     [SerializeField]float speed;
     [SerializeField] float time;
     bool itsHappening=false;
+    [SerializeField]Transform finalPos;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,20 @@ public class shooter : MonoBehaviour
     void StopShooting()
     {
         itsHappening = false;
-        GetComponent<shooter>().enabled = false;
+
+        StartCoroutine(Down());
+    }
+
+    IEnumerator Down()
+    {
+        while (true)
+        {
+            Vector2 posicao = transform.position;
+            posicao.y = Mathf.MoveTowards(posicao.y, finalPos.position.y, speed * Time.deltaTime);
+            transform.position = posicao;
+
+            if (Mathf.Abs(posicao.y - finalPos.position.y) < 0.05f) break;
+            yield return null;
+        }
     }
 }

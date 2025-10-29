@@ -25,6 +25,10 @@ public class followPlayer : MonoBehaviour
 
         if (mvSensor == null)
             mvSensor = GetComponentInChildren<moveSensor>();
+
+        mvSensor.started += StartFollow;
+
+        currentTarget = targets[i];
     }
 
     void changeTarget()
