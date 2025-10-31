@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 460891082}
   - component: {fileID: 460891084}
   - component: {fileID: 460891083}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: risingPlataform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6387985a9cff440871d219b067d5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorWidth: 1.07
+  sensorWidth: 1.68
   sensorHeight: 3.16
 --- !u!61 &1431056383
 BoxCollider2D:
@@ -1496,11 +1496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.12
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.11
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.z

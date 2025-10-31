@@ -1240,7 +1240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetobj: {fileID: 1311534229}
   speed: 3.88
-  direction: 2
+  dir: 0
 --- !u!1001 &2112647784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1262,7 +1262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.z

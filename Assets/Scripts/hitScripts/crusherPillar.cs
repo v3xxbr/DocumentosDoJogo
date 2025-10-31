@@ -52,7 +52,7 @@ public class crusherPillar : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        yield return new WaitForSeconds(2.3f);
+        yield return new WaitForSeconds(0.9f);
 
         //retorna a posição inicial
         while (Vector2.Distance(rbHead.position, originalPos) > 0.01f)

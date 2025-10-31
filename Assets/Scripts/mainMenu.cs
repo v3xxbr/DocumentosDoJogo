@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class mainMenu : MonoBehaviour
 {
@@ -15,10 +16,24 @@ public class mainMenu : MonoBehaviour
     public GameObject target;
     public GameObject Lava;
 
-    public void Play()
+    private void Start()
     {
+        gameUI exisUI = FindObjectOfType<gameUI>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        #if UNITY_EDITOR
+        PlayerPrefs.DeleteAll();
+        #endif
+
+        if (exisUI != null)
+        {
+            Destroy(exisUI);
+        }
+    }
+
+    public void Play()
+    {
         StartCoroutine(shortCutscene());
     }
 
@@ -36,9 +51,8 @@ public class mainMenu : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(2.1f);
-        //SceneManager.LoadScene(1);
-        SceneManager.LoadScene(2);
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void Tutorial()
@@ -55,16 +69,11 @@ public class mainMenu : MonoBehaviour
 
     public void Panels()
     {
-        if (tutorialImage.activeSelf || creditsImage.activeSelf)
-        {
-            tutorialImage.SetActive(false);
-            creditsImage.SetActive(false);
-        }
-        else
-        {
-            tutorialImage.SetActive(true);
-            creditsImage.SetActive(true);
-        }
+        tutorialImage.SetActive(false);
+        creditsImage.SetActive(false);
+
+        EventSystem ev = EventSystem.current; 
+        ev.SetSelectedGameObject(ev.firstSelectedGameObject);
     }
 
     public void Exit()

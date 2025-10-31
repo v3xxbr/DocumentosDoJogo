@@ -53,7 +53,7 @@ public class walkSpin : MonoBehaviour
             EndLevel.GetComponent<BoxCollider2D>().isTrigger = false;
             EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             EndLevel.GetComponent<Rigidbody2D>().gravityScale = 1f;
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(1.7f);
             EndLevel.GetComponent<BoxCollider2D>().isTrigger = true;
             EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             yield break;

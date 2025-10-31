@@ -17,9 +17,13 @@ public class moveSensor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
+
         if (player.GetComponent<Rigidbody2D>().velocity.x != 0)
         {
-            started.Invoke();
+            if(started!=null)
+                started.Invoke();
         }
     }
 }

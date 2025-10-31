@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext value)
     {
-        if (!isJumping)
+        if (value.started && !isJumping)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             currentStage = stages.Jumping;
@@ -89,13 +89,11 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
-       
         gameObject.SetActive(false);
         ++deathCount.deathTimes;
         deathCount.itsover = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameObject.SetActive(true);
-       
     }
 
     void OnCollisionEnter2D(Collision2D other)

@@ -8,7 +8,7 @@ public class background : MonoBehaviour
 {
     public GameObject[] backgrounds;
     private GameObject currentBackground;
-    public static bool level2=false;
+    public bool world2=false;
     public static int n=0;
 
     // Start is called before the first frame update
@@ -18,18 +18,31 @@ public class background : MonoBehaviour
         updatingBackground();
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoad;
+    }
+
+    void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        if(!world2 && (scene.name == "Level6" || scene.buildIndex > SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/SecondWorld/Level6.unity")))
+        {
+            world2 = true;
+            ++n;
+            updatingBackground();
+        }
+    }
+
     // Update is called once per frame
     
     public void updatingBackground()
     {
-        backgrounds[n].SetActive(true);
-        currentBackground = backgrounds[n];
+        if (n >= backgrounds.Length)
+            return;
 
         //getbuildindex serve para pegar o index da cena só pelo nome
-        if (SceneManager.GetActiveScene().buildIndex > SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/Level6.unity"))
-        {
-            ++n;
-            level2 = true;
-        }
+        for (int i = 0; i < backgrounds.Length; ++i)
+         backgrounds[i].SetActive(i == n);
+        currentBackground = backgrounds[n];
     }
 }

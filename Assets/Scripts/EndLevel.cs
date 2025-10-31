@@ -26,16 +26,15 @@ public class EndLevel : MonoBehaviour
     IEnumerator loadNewLevel(int m)
     {
         background currentbg = FindObjectOfType<background>();
-
         Animator anim = gameUI.objectt.animtransition;
+
+        string keyNextLevel = "Level" + (currentMoment + 1) + "Unlocked";
+        PlayerPrefs.SetInt(keyNextLevel, 1);
 
         anim.SetBool("start", true);
         yield return new WaitForSeconds(transitionTime);
-
         SceneManager.LoadScene(m);
-        anim.SetBool("start", false);
 
-        if (background.level2 == false)
-            currentbg.GetComponent<background>().updatingBackground();
+        anim.SetBool("start", false);
     }
 }

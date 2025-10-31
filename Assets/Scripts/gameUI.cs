@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class gameUI : MonoBehaviour
 {
     public static gameUI objectt;
     public Animator animtransition;
+    GameObject pauseMenu;
 
     public void Awake()
     {
@@ -15,9 +18,9 @@ public class gameUI : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        DontDestroyOnLoad(gameObject);
 
         objectt = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public static void createUI(GameObject h)
@@ -36,6 +39,33 @@ public class gameUI : MonoBehaviour
 
         GameObject obj = Instantiate(h);
         objectt = obj.GetComponent<gameUI>();
-        DontDestroyOnLoad(obj);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu")
+        {
+            Hide();
+        }
+    }
+
+    public void Hide()
+    {
+        background bg = FindObjectOfType<background>();
+
+        foreach (Transform childElements in gameObject.transform)
+        {
+            childElements.gameObject.SetActive(false);
+        }
     }
 }

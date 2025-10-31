@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class levelSelect : MonoBehaviour
 {
-    int initialIndex, finalIndex;
-    public static bool[] unlockedLevels;
+    [SerializeField]int levelQuant=0;
+    public Transform container;
+    public GameObject btnPrefab;
 
-    GameObject[] Button;
-    GameObject summbutton;
-    GameObject[] Container;
-
-    public static bool isUnlocked;
+    [SerializeField] Transform[] targets;
 
     // Start is called before the first frame update
     void Start()
     {
-        CreatingButtons();
+        InstanceButtons();
     }
 
     // Update is called once per frame
@@ -26,23 +25,32 @@ public class levelSelect : MonoBehaviour
         
     }
 
-    void CreatingButtons()
+    void InstanceButtons()
     {
-        int v = finalIndex - initialIndex;
-        Button = new GameObject[v];
-        Container = new GameObject[v];
-
-        for (int c = initialIndex; c < finalIndex; ++c)
+        for (int j = 1; j < (levelQuant / 2) + 1; ++j)
         {
-            if (unlockedLevels[c] && Button[c] == null)
-            {
-                Button[c] = Instantiate(summbutton, Container[c].transform.position, Quaternion.identity);
-            }
-        }
-    }
+            int confid = (j==1) ? 1:0;
 
-    public void EnterLevel()
-    {
-        
+            string levelName = "Level" + j;
+            GameObject but = Instantiate(btnPrefab, container);
+            but.transform.position = targets[j - 1].position;
+
+            if (j == 1)
+                EventSystem.current.SetSelectedGameObject(but);
+
+            //PEGA a int que está contida no prefs
+            int status = PlayerPrefs.GetInt(levelName + "Unlocked", confid);
+
+            //verifica se a int retirada em status vale 1
+            bool unlocked = (status == 1);
+
+            //Verifica se é interativo com base na variável que checa se o status é 1 ou 0
+            but.GetComponent<UnityEngine.UI.Button>().interactable = unlocked;
+
+            //Lambdas guardam variáveis, não valores, assim, caso 'levelName' fosse usado diretamente, por ser um valor variável, a Lambda só leria o último
+            string currentName = levelName;
+            Button btn = but.GetComponent<Button>();
+            btn.onClick.AddListener(() => { SceneManager.LoadScene(currentName); });
+        }
     }
 }
