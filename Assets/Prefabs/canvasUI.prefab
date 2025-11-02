@@ -317,7 +317,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 1274163545627715808}
   - {fileID: 1274163544998962976}
-  world2: 0
+  levelsQuant: 0
 --- !u!1001 &1639765021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,6 +416,38 @@ PrefabInstance:
     - target: {fileID: 6177998786373977036, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
       propertyPath: m_Name
       value: gameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324272, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.7906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324272, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 117.3277
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324272, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -402.67395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324272, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 233
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324274, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324274, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_margin.w
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324274, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_margin.z
+      value: 1.7262573
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177998786440324274, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310f2295b9e7e454c9f764240047e09b, type: 3}

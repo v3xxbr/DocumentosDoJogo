@@ -7,8 +7,12 @@ using UnityEngine.EventSystems;
 
 public class levelSelect : MonoBehaviour
 {
-    [SerializeField]int levelQuant=0;
-    public Transform container;
+    public static int levelQuant=10;
+    public Transform world1cont, world2cont;
+
+    bool isWorld1=true;
+
+    public Button changeWorldBtn;
     public GameObject btnPrefab;
 
     [SerializeField] Transform[] targets;
@@ -16,33 +20,34 @@ public class levelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("world2Free", 0) == 1)
+            changeWorldBtn.interactable = true;
+
         InstanceButtons();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void InstanceButtons()
     {
-        for (int j = 1; j < (levelQuant / 2) + 1; ++j)
+        for (int j = 1; j < levelQuant+1; ++j)
         {
             int confid = (j==1) ? 1:0;
-
             string levelName = "Level" + j;
+
+            Transform container = j >= 6 ? world2cont : world1cont;
             GameObject but = Instantiate(btnPrefab, container);
-            but.transform.position = targets[j - 1].position;
+
+            if (j<targets.Length+1)
+                but.transform.position = targets[j-1].position;
+            else
+                but.transform.position = targets[j-6].position;
 
             if (j == 1)
                 EventSystem.current.SetSelectedGameObject(but);
 
-            //PEGA a int que está contida no prefs
-            int status = PlayerPrefs.GetInt(levelName + "Unlocked", confid);
-
-            //verifica se a int retirada em status vale 1
-            bool unlocked = (status == 1);
+            //PEGA a int que está contida no prefs e verifica se a int retirada vale 1
+            bool unlocked = (PlayerPrefs.GetInt(levelName + "Unlocked", confid) == 1);
 
             //Verifica se é interativo com base na variável que checa se o status é 1 ou 0
             but.GetComponent<UnityEngine.UI.Button>().interactable = unlocked;
@@ -52,5 +57,13 @@ public class levelSelect : MonoBehaviour
             Button btn = but.GetComponent<Button>();
             btn.onClick.AddListener(() => { SceneManager.LoadScene(currentName); });
         }
+    }
+
+    public void ChangeWorld()
+    {
+       isWorld1 = !isWorld1;
+
+        world1cont.gameObject.SetActive(isWorld1);
+        world2cont.gameObject.SetActive(!isWorld1);
     }
 }

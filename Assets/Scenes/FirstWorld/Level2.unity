@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 1565859197}
     - target: {fileID: 8693985766566765690, guid: ad531ba9f18e84644883f82072c2b122, type: 3}
       propertyPath: destructionTime
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 484820029, guid: ad531ba9f18e84644883f82072c2b122, type: 3}

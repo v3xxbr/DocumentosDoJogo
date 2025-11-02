@@ -50,12 +50,15 @@ public class walkSpin : MonoBehaviour
         {
             GameObject EndLevel = GameObject.FindGameObjectWithTag("EndLevel");
 
+            //formulando a queda
             EndLevel.GetComponent<BoxCollider2D>().isTrigger = false;
             EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             EndLevel.GetComponent<Rigidbody2D>().gravityScale = 1f;
-            yield return new WaitForSeconds(1.7f);
-            EndLevel.GetComponent<BoxCollider2D>().isTrigger = true;
+
+            yield return new WaitForSeconds(1.4f);
+            //depois da queda
             EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            EndLevel.GetComponent<BoxCollider2D>().isTrigger = true;
             yield break;
         }
 

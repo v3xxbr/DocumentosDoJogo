@@ -82,14 +82,13 @@ public class Player : MonoBehaviour
 
         else
           anim.SetInteger("transition", 0);
-        
 
         flipSprite();
     }
 
     public IEnumerator Dead()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         gameObject.SetActive(false);
         ++deathCount.deathTimes;
         deathCount.itsover = true;

@@ -498,8 +498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6387985a9cff440871d219b067d5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorWidth: 1.18
-  sensorHeight: 1.51
+  sensorWidth: 0.83
+  sensorHeight: 1.73
 --- !u!1 &1114465297
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetobj: {fileID: 1909253599}
-  speed: 3
+  speed: 6
   dir: 0
 --- !u!114 &1179484219
 MonoBehaviour:

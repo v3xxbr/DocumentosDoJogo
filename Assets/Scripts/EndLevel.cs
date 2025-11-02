@@ -28,8 +28,10 @@ public class EndLevel : MonoBehaviour
         background currentbg = FindObjectOfType<background>();
         Animator anim = gameUI.objectt.animtransition;
 
-        string keyNextLevel = "Level" + (currentMoment + 1) + "Unlocked";
+        int levelNumber = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
+        string keyNextLevel = "Level" + (levelNumber + 1) + "Unlocked";
         PlayerPrefs.SetInt(keyNextLevel, 1);
+        PlayerPrefs.Save();
 
         anim.SetBool("start", true);
         yield return new WaitForSeconds(transitionTime);

@@ -8,12 +8,6 @@ public class breakBarrier : MonoBehaviour
     public int n=0;
     bool fall;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         startFall();

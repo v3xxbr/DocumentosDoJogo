@@ -538,8 +538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c09fa168ec33ad45bf71a1ff8121d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelQuant: 0
-  container: {fileID: 0}
+  world1cont: {fileID: 0}
+  world2cont: {fileID: 0}
+  changeWorldBtn: {fileID: 0}
   btnPrefab: {fileID: 0}
   targets: []
 --- !u!4 &1411603938
