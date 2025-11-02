@@ -58,5 +58,6 @@ public class finalDirector : MonoBehaviour
         textAnim.SetTrigger("textTrigger");
         yield return new WaitForSeconds(textAnim.GetCurrentAnimatorStateInfo(0).length);
         thanksText.GetComponent<CanvasGroup>().alpha = 1f;
+        PlayerPrefs.DeleteAll();
     }
 }

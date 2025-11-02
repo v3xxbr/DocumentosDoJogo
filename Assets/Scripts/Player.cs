@@ -87,8 +87,9 @@ public class Player : MonoBehaviour
         flipSprite();
     }
 
-    public void Dead()
+    public IEnumerator Dead()
     {
+        yield return new WaitForSeconds(0.01f);
         gameObject.SetActive(false);
         ++deathCount.deathTimes;
         deathCount.itsover = true;
@@ -100,7 +101,7 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Hit") || other.gameObject.CompareTag("Hit"))
         {
-            Dead();
+            StartCoroutine(Dead());
         }
     }
 

@@ -33,7 +33,8 @@ public class quickSand : MonoBehaviour
 
         else
         {
-            player.GetComponent<Player>().Dead();
+            Player p = player.GetComponent<Player>();
+            p.StartCoroutine(p.Dead());
         }
     }
 
