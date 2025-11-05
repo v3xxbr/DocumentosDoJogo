@@ -1,210 +1,202 @@
 body{
-    background-color: gray;
     margin:0;
     padding:0;
+    height: 100vh;
+
+    background-image: url('imgs/shipBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
 }
 
-header{
-    position: relative;
-    width: 100%;
-    height:90px;
-    background-color: yellow;
+.centralPart{
+    margin:0 auto;
+    width:100%;
+    height: 100%;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
 }
 
 nav{
     position: relative;
-    width: 100%;
+    width: 50%;
+    display: flex;
+
+    margin-top: 5%;
+    height:10%;
+
     box-sizing: border-box;
-    height: 100px;
+    text-align: center;
+    align-items: center;
+
     background-color: orange;
     border: 2px solid black;
 }
 
-.imgDiv{
-    position: absolute;
-    width: 100px;
-    height:90px;
-    left: 20;
-    border: 2px solid pink;
-}
-
-.imgDiv img{
-    width: 100px;
-    height:100px;
-    object-fit: cover;
-}
-
 .optionsNav{
+    margin:0;
+    padding:0;
     display: flex;
     position:relative;
     align-items: center;
     justify-content: center;
-    height:90px;
-    border: 4px solid green;
+    height:100%;
 }
 
 .optionsNav ul{
     display: flex;
+    margin: 0;
+    padding:0;
     align-items: center;
     justify-content: center;
 }
 
 .optionsNav a{
     text-decoration: none;
-    color: whitesmoke;
+    color: gray;
 }
 
 .optionsNav li{
-    display: inline-block;
-    margin: 20px;
-}
-
-.optionbutton{
     display: flex;
-    position: absolute;
-    right: 15px;
-    border: 5px orange solid;
-    width: 100px;
-    height: 85px;
-    align-items: center;
     justify-content: center;
-}
-
-.optionbutton button{
-    width: 95px;
-    height: 90px;
-}
-
-.centralContent{
-    display: flex;
-}
-
-section{
-    width: 100%;
-    background-attachment: fixed;
-    min-height: 600px;
-    background-image: url(imgs/playerIronBall.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: chocolate;
-}
-
-article{
-    position: relative;
-    flex-direction: column;
-    background-color: greenyellow;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    box-sizing: border-box;
-    height:fit-content;
-}
-
-article p{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 40px;
-}
-
-.logos{
-    display: flex;
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 200px;
-    border: 2px solid black;
-}
-
-.logo{
-    display: flex;
-    width: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-    height: 100%;
-    border: 4px orange solid;
-}
-
-.logo img{
-    width: 100%;
-    height: 100%;
-}
-
-footer{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 450px;
-    background-color: blueviolet;
-}
-
-.card{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width: 250px;
-    background-color: bisque;
-    height: 400px;
-    margin: 200px;
-    border: 2px red solid;
-}
-
-.imgCard{
-    position: absolute;
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    box-sizing: border-box;
-    border: 2px green solid;
-    overflow: hidden;
-}
-
-.imgCard img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h2{
-    display: flex;
-    position: absolute;
-    top: 56%;
-    text-align: center;
+    margin: 0 20px;
 }
 
 .dropdown{
-    display: flex;
+    display: inline-block;
     position: relative;
-    flex-direction: column;
-    display: block;
 }
 
 .dropdownContent{
-    display: flex;
+    display: none;
+    top: 100%;
+    left: 0;
     border-radius: 5%;
     border: 2px solid black;
+    z-index: 10;
     background-color: antiquewhite;
     position: absolute;
-    width: 100%;
-    height: 250px;
+    width: max-content;
+    height: auto;
 }
 
 .dropdownContent ul{
     display: flex;
-    width: 100%;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    list-style: none;
     border: 2px solid orange;
     flex-direction: column;
 }
 
-.dropdownContent a{
-    color: green;
-}
-
 .dropdownContent li{
     border: 3px hotpink solid;
-    height: 20%;
+    height: auto;
+}
+
+.dropdown:hover .dropdownContent{
+    display: block;
+}
+
+.exibitionCard{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5%;
+    height:20%;
+
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    height: 50%;
+}
+
+.ICImg{
+    width:50%;
+    height: 100%;
+}
+
+.ICImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.about{
+    margin: 0 5% 0 5%;
+    background-color:azure;
+    width: 25%;
+    padding: 20px;
+    border-radius: 3%;
+    box-sizing: border-box;
+    text-align: center;
+    height:100%;
+}
+
+article{
+    display: flex;
+    margin-top: 15%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+#developers{
+    margin: 40% 0 40% 0;
+}
+
+.playGame{
+    display: flex;
+    background-color: red;
+    position: fixed;
+    width: 10%;
+    height: 9%;
+    right: 8%;
+    bottom:8%;
+}
+
+.playGame:hover{
+    cursor: pointer;
+}
+
+.about ul{
+    list-style: none;
+    width: 100%;
+    height:auto;
+    margin:0;
+    padding: 0;
+}
+
+.about li{
+    margin:15%;
+}
+
+.about a{
+    text-decoration: none;
+    color: rgb(47, 5, 47);
+}
+
+footer{
+    display: flex;
+    margin-top: 40%;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    flex-direction: column;
+    height: 100%;
 }
