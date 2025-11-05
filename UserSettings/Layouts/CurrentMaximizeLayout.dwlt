@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 30360
+  controlID: 31499
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 30361
+  controlID: 31500
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 30362
+  controlID: 31501
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,9 +227,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 10930100
-      m_LastClickedID: 103184
-      m_ExpandedIDs: 2ef5fdff6401fefff618feff5c22feff4426fefff441feff0842feff2642feff2654feff3054feffc654feffd656feff5e57feff4c58feff685afeff0e5cfeffc465feff566afeff606afeff826afeffc46afeff2874fefff0a8feff9ea9feffc8aafeff36acfeff14adfeff10affeffdcaffefff6b0feffa0b1feff8ab3feff64b4feff0eb5fefffab5feff38b8feffa8b9feff40bbfeff28bdfeff02ccfeff7ed6feffc2edfeff1a14ffff6215ffff7416ffff981fffff6020ffff7a4cffff824cffffba4effff9050ffff626affffe26cfffff26dffff7c6ffffff481ffff80b6ffffd2b7ffff3ab9ffffcabaffffc0bbffff4abdfffff4c4ffff2ccaffff36caffff58caffff9acaffff4acfffffbed8ffff4edffffff6f4ffff22fbfffff4ffffff067c00005c810000a2840000828900008c8900009e8900005cac000098c40000e6c4000016c5000070c5000076ca000086ca0000b0ca0000e0ca0000ecca000026cb000064dd000094dd000008e200002ce20000fe250100e4270100382901001c930100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: aee3fdff3ce5fdff1ee6fdff66e6fdff22e8fdff6ae8fdffb4e8fdff42e9fdffd8e9fdff50eafdffb2eafdff62ebfdffceebfdff6eecfdffaaedfdffb0edfdffc8edfdff6401fefff618feff5c22feff4426fefff441feff0842feff2642feff2654feff3054feffc654feffd656feff5e57feff4c58feff685afeff0e5cfeffc465feff566afeff606afeff826afeffc46afeff2874fefff0a8feff9ea9feffc8aafeff36acfeff14adfeff10affeffdcaffefff6b0feffa0b1feff8ab3feff64b4feff0eb5fefffab5feff38b8feffa8b9feff40bbfeff28bdfeff02ccfeff7ed6feffc2edfeff1a14ffff6215ffff7416ffff981fffff6020ffff7a4cffff824cffffba4effff9050ffff626affffe26cfffff26dffff7c6ffffff481ffff80b6ffffd2b7ffff3ab9ffffcabaffffc0bbffff4abdfffff4c4ffff2ccaffff36caffff58caffff9acaffff4acfffffbed8ffff4edffffff6f4ffff22fbfffff4ffffff067c00005c810000a2840000828900008c8900009e8900005cac000098c40000e6c4000016c5000070c5000076ca000086ca0000b0ca0000e0ca0000ecca000026cb000064dd000094dd000008e200002ce20000fe250100e4270100382901001c930100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -810,8 +810,8 @@ MonoBehaviour:
     y: 0
     width: 454.40002
     height: 427.2
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -887,22 +887,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/SecondWorld
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/SecondWorld
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\blaac\OneDrive\Documentos\Unity2D\ConclusaoAnual\ConclusaoAnual
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a630000
-    m_LastClickedID: 25434
-    m_ExpandedIDs: 000000000a6300000c6300000e63000010630000126300001463000052630000
+    m_SelectedIDs: 52630000
+    m_LastClickedID: 25426
+    m_ExpandedIDs: 000000000a6300000c6300000e630000106300001263000014630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -955,9 +955,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 10930100
-    m_LastClickedInstanceID: 103184
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000765d0000ce820000dc820000a45d0000ae5d00002aa60100c0ba0000587a00000a640000b4600000b288000094630000a0850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

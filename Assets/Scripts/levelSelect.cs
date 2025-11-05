@@ -20,9 +20,6 @@ public class levelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("world2Free", 0) == 1)
-            changeWorldBtn.interactable = true;
-
         InstanceButtons();
     }
 
