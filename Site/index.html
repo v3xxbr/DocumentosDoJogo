@@ -7,10 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <title>Site Beetwen Books</title>
 </head>
 <body>
         <div class="centralPart">
+
+        <div class="logo">
+            <img src="https://i.postimg.cc/25Zf5DFZ/logo-me-humilhei-page-0001-removebg-preview.png">
+
+            <h1>Beetwen Books</h1>
+        </div>
         <nav>
                 <div class="optionsNav">
             <ul>
@@ -35,18 +46,46 @@
         </nav>
 
         <div class="exibitionCard">
-            <div class="ICImage">
+            <div class="ICImg">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://static.sbt.com.br/noticias/images/261472.jpg"></div>
+                    <div class="swiper-slide"><img src="https://f.i.uol.com.br/fotografia/2017/11/28/15118903175a1d9d8d7f88f_1511890317_3x2_lg.jpg"></div>
+                    <div class="swiper-slide"><img src="https://vejasp.abril.com.br/wp-content/uploads/2016/11/6415_marquito-sp-vereador-2013-64-jpg.jpeg?quality=70&strip=info&resize=1080,565&crop=1"></div>
+                </div>
+  
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+        </div>
             </div>
             <div class="ICIText">
-   
+                <p>E se no dia de sua formatura você descobrisse que os professores fossem levados para dentro de LIVROS?</p>
             </div>
         </div>
         </div>
 
     <section>
-        <div class="about"></div>
-        <div class="about"></div>
-        <div class="about"></div>
+        <div class="about">
+            <video autoplay loop muted playsinline class="gif">
+                <source src="videos/morrendo_mp4.mp4" type="video/mp4">
+            </video>
+            <p>O jogo se encontra em disponibilidade no <b>Itch.IO</b> e, por sua completude, o motor gráfico usado foi a Unity Engine.</p>
+        </div>
+
+        <div class="about">
+            <video autoplay loop muted playsinline class="gif">
+                <source src="videos/morrendo_mp4.mp4" type="video/mp4">
+            </video>
+
+            <p>Explore dois mundos distintos com 5 fases!</p>
+        </div>
+        
+        <div class="about">
+            <img src="https://i.postimg.cc/G2DMwgQC/imagem-2025-11-06-191455589.png">
+
+            <p>Jogo totalmente compatível com controle e teclado!</p>
+        </div>
     </section>
     
     <article>
@@ -56,22 +95,18 @@
                 <li>Programador: <a href="https://github.com/v3xxbr" target="_blank">Brito</a></li>
                 <li>Artista(s): 
                     <a href="https://github.com/Tyvernus" target="_blank">Breno Trigo</a>
-                    <br>
                     <a href="https://github.com/" target="_blank">Elisabella Sabbah</a>
                 </li>
                 <li>Designer(s): 
                     <a href="https://github.com/" target="_blank">Gabriel Valones</a>
-                    <br>
                     <a href="https://github.com/angelicasouzart" target="_blank">Angélica Francisconi</a>
                 </li>
-                <li>Musicista: <a href="https://github.com/">Beatriz Primos</a></li>
+                <li>Musicista: <a href="https://github.com/" target="_blank">Beatriz Primos</a></li>
             </ul>
         </div>
     </article>
 
-    <button class=>
-        <a href="https://britao.itch.io/squaredb-project" target="_blank" class="playGame"></a>
-    </button>
+    <a href="https://britao.itch.io/squaredb-project" target="_blank" class="playGame"></a>
 
     <footer>
         <h1>Todos os Direitos Reservados SquaredB ©</h1>
@@ -81,4 +116,13 @@
         <p>São Paulo, 2025</p>
     </footer>
 </body>
+
+<script>
+        new Swiper('.swiper', {
+        loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: '.swiper-pagination' },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+    </script>
 </html>

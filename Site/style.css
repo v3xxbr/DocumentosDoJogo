@@ -3,7 +3,7 @@ body{
     padding:0;
     height: 100vh;
 
-    background-image: url('imgs/shipBackground.jpg');
+    background-image: url('https://i.postimg.cc/GpvTbYLp/ship-Background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,9 +17,22 @@ body{
     width:100%;
     height: 100%;
     display: flex;
-    
+
     flex-direction: column;
     align-items: center;
+}
+
+.logo{
+    margin: 3% 0 3% 0;
+    width: 10%;
+    height: 20%;
+    text-align: center;
+}
+
+.logo img{
+    object-fit: contain;
+    width: 100%;
+    height:100%;
 }
 
 nav{
@@ -120,8 +133,13 @@ nav{
 }
 
 .ICImg{
-    width:50%;
+    display: flex;
+    position: absolute;
+    right: 0%;
+    width:65%;
     height: 100%;
+    background-color: rgb(224, 200, 171);
+    overflow: hidden;
 }
 
 .ICImg img{
@@ -131,21 +149,44 @@ nav{
     display: block;
 }
 
+.ICIText{
+    display: flex;
+    position: absolute;
+    left: 1%;
+    width:30%;
+    height: 100%;
+    text-align: center;
+}
+
+.ICIText p{
+    margin-top: 40%;
+}
+
 section{
     display: flex;
     justify-content: space-between;
+    margin-top: 25%;
     height: 60%;
 }
 
 .about{
+    display: flex;
     margin: 0 5% 0 5%;
-    background-color:azure;
+    background-color:transparent;
     width: 25%;
     padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border-radius: 3%;
     box-sizing: border-box;
     text-align: center;
     height:100%;
+}
+
+.gif{
+    width:50%;
+    height:auto;
 }
 
 article{
@@ -157,7 +198,16 @@ article{
 }
 
 #developers{
-    margin: 40% 0 40% 0;
+    background-color: wheat;
+    margin: 30% 0 30% 0;
+}
+
+#developers h1{
+    color: rgb(43, 60, 9);
+}
+
+#developers li{
+    color: blue;
 }
 
 .playGame{
@@ -174,6 +224,10 @@ article{
     cursor: pointer;
 }
 
+.about{
+    color:whitesmoke;
+}
+
 .about ul{
     list-style: none;
     width: 100%;
@@ -183,12 +237,14 @@ article{
 }
 
 .about li{
-    margin:15%;
+    margin:10%;
+    color:blue;
 }
 
 .about a{
     text-decoration: none;
     color: rgb(47, 5, 47);
+    font-size: 14px;
 }
 
 footer{
@@ -196,7 +252,7 @@ footer{
     margin-top: 40%;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: rgb(57, 12, 12);
     flex-direction: column;
     height: 40%;
     color: whitesmoke;
