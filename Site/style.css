@@ -17,14 +17,13 @@ body{
     width:100%;
     height: 100%;
     display: flex;
-
     flex-direction: column;
     align-items: center;
 }
 
 .logo{
-    margin: 3% 0 3% 0;
-    width: 10%;
+    margin: 3% 0;
+    width: 15%;
     height: 20%;
     text-align: center;
 }
@@ -39,26 +38,23 @@ nav{
     position: relative;
     width: 50%;
     display: flex;
-
-    margin-top: 5%;
-    height:10%;
-
+    margin: 3% 0;
+    height:auto;
+    padding: 10px 0;
     box-sizing: border-box;
     text-align: center;
     align-items: center;
-
     background-color: orange;
     border: 2px solid black;
 }
 
 .optionsNav{
     margin:0;
-    padding:0;
+    padding:5px;
     display: flex;
     position:relative;
     align-items: center;
     justify-content: center;
-    height:100%;
 }
 
 .optionsNav ul{
@@ -90,12 +86,11 @@ nav{
     display: none;
     top: 100%;
     left: 0;
+    position: absolute;
     border-radius: 5%;
     border: 2px solid black;
     z-index: 10;
     background-color: antiquewhite;
-    position: absolute;
-    width: max-content;
     height: auto;
 }
 
@@ -109,7 +104,8 @@ nav{
 }
 
 .dropdownContent li{
-    border: 3px hotpink solid;
+    margin: 10px 0;
+    font-size: 12px;
     height: auto;
 }
 
@@ -123,13 +119,10 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 5%;
-    height:20%;
-
+    height:100%;
     box-sizing: border-box;
     background-color: whitesmoke;
-    height: 50%;
 }
 
 .ICImg{
@@ -165,7 +158,7 @@ nav{
 section{
     display: flex;
     justify-content: space-between;
-    margin-top: 25%;
+    margin-top:15%;
     height: 60%;
 }
 
@@ -199,7 +192,7 @@ article{
 
 #developers{
     background-color: wheat;
-    margin: 30% 0 30% 0;
+    margin: 25% 0;
 }
 
 #developers h1{
@@ -216,6 +209,7 @@ article{
     position: fixed;
     width: 10%;
     height: 9%;
+    z-index: 10;
     right: 8%;
     bottom:8%;
 }
@@ -256,4 +250,102 @@ footer{
     flex-direction: column;
     height: 40%;
     color: whitesmoke;
+}
+
+@media (max-width: 768px){
+    .centralPart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10%;
+    }
+
+    .logo h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img{
+        width:100%;
+        max-width: 300px;
+        height:auto;
+    }
+    
+    nav{
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 100px;
+        padding: 20px 0;
+        height: auto;
+        box-sizing: border-box;
+        min-height: 50px;
+    }
+
+    .optionsNav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .optionsNav ul{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin:0;
+        padding:0;
+        gap: 5px;
+    }
+
+    .optionsNav li{
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .dropdownContent{
+        position: absolute;
+        width: 100%;
+    }
+
+    .exibitionCard{
+        width: 90%;
+        height: 80%;
+    }
+
+    .exibitionCard p{
+        margin-top: 15%;
+    }
+
+    section{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        height: auto;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+
+    .about{
+        width: 60%;
+    }
+
+    article{
+        margin-top: 30%;
+    }
+
+    .playGame{
+        width: 20%;
+    }
+
+    footer{
+        text-align: center;
+    }
 }
