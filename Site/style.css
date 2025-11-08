@@ -30,15 +30,15 @@ body{
     background-size: contain;
     width: 170px;
     height: 170px;
+    display: flex;
 }
 
 
 nav{
     position: relative;
-    width: 50%;
+    width: 60%;
     display: flex;
-    margin: 3% 0;
-    height:auto;
+    margin: 5% 0;
     padding: 10px 0;
     box-sizing: border-box;
     text-align: center;
@@ -48,36 +48,28 @@ nav{
 }
 
 .optionsNav{
-    margin:0;
-    padding:5px;
     display: flex;
-    position:relative;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .optionsNav ul{
     display: flex;
+    list-style-type: none;
     margin: 0;
     padding:0;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
 }
 
 .optionsNav a{
     text-decoration: none;
-    color: gray;
+    color: black;
+    font-size: 12px;
 }
 
-.optionsNav li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px;
-}
+
 
 .dropdown{
-    display: inline-block;
     position: relative;
 }
 
@@ -90,22 +82,19 @@ nav{
     border: 2px solid black;
     z-index: 10;
     background-color: antiquewhite;
-    height: auto;
 }
 
 .dropdownContent ul{
     display: flex;
     margin:0;
-    padding:0;
+    padding:10px;
     list-style: none;
     border: 2px solid orange;
     flex-direction: column;
 }
 
 .dropdownContent li{
-    margin: 10px 0;
-    font-size: 12px;
-    height: auto;
+    margin: 5px 0;
 }
 
 .dropdown:hover .dropdownContent{
@@ -113,85 +102,75 @@ nav{
 }
 
 .exibitionCard{
-    position: relative;
-    width: 50%;
+    width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 5%;
-    height:100%;
-    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: whitesmoke;
 }
 
 .ICImg{
-    display: flex;
-    position: absolute;
-    right: 0%;
-    width:65%;
-    height: 100%;
-    background-color: rgb(224, 200, 171);
-    overflow: hidden;
+    flex: 1 1 60%;
 }
 
 .ICImg img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .ICIText{
-    display: flex;
-    position: absolute;
-    left: 1%;
-    width:30%;
-    height: 100%;
-    text-align: center;
+    flex: 1 1 35%;
+    padding: 20px;
+    text-align: justify;
+    
 }
 
-.ICIText p{
-    margin-top: 40%;
-}
 
 section{
     display: flex;
-    justify-content: space-between;
-    margin-top:15%;
-    height: 60%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 10% 0
+
 }
 
 .about{
-    display: flex;
-    margin: 0 5% 0 5%;
-    background-color:transparent;
-    width: 25%;
+    width: 28%;
+    min-width: 250px;
+    background-color: black;
+    border-radius: 10px;
     padding: 20px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 3%;
-    box-sizing: border-box;
+    color:whitesmoke;
     text-align: center;
-    height:100%;
 }
 
-.gif{
-    width:50%;
-    height:auto;
+.about img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
+
 
 article{
     display: flex;
-    margin-top: 15%;
-    height: 60%;
     justify-content: center;
-    align-items: center;
+    margin: 10% 0;
 }
 
 #developers{
     background-color: wheat;
-    margin: 25% 0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
 }
 
 #developers h1{
@@ -199,6 +178,7 @@ article{
 }
 
 #developers li{
+    margin: 15px 0;
     color: blue;
 }
 
@@ -228,28 +208,7 @@ article{
         transition: transform 0.5s;
     }
 
-.about{
-    color:whitesmoke;
-}
 
-.about ul{
-    list-style: none;
-    width: 100%;
-    height:auto;
-    margin:0;
-    padding: 0;
-}
-
-.about li{
-    margin:10%;
-    color:blue;
-}
-
-.about a{
-    text-decoration: none;
-    color: rgb(47, 5, 47);
-    font-size: 14px;
-}
 
 footer{
     display: flex;
@@ -258,96 +217,87 @@ footer{
     align-items: center;
     background-color: rgb(57, 12, 12);
     flex-direction: column;
-    height: 40%;
     color: whitesmoke;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-@media (max-width: 768px){
-    .centralPart{
-        display: flex;
+
+@media (max-width: 1024px) {
+    nav {
+        width: 80%;
+    }
+
+    .exibitionCard {
+        width: 85%;
         flex-direction: column;
-        align-items: center;
-        gap: 10%;
     }
 
-    .logo h1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-    nav{
-        display: flex;
-        width: 70%;
-        flex-direction: column;
-        align-items: stretch;
-        min-height: 100px;
-        padding: 20px 0;
-        height: auto;
-        box-sizing: border-box;
-        min-height: 50px;
-    }
-
-    .optionsNav{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        align-items: stretch;
-    }
-
-    .optionsNav ul{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        margin:0;
-        padding:0;
-        gap: 5px;
-    }
-
-    .optionsNav li{
-        width: 100%;
-        padding: 5px 0;
-    }
-
-    .dropdownContent{
-        position: absolute;
-        width: 100%;
-    }
-
-    .exibitionCard{
+    .ICIText {
         width: 90%;
-        height: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
     }
 
-    .exibitionCard p{
-        margin-top: 15%;
+    nav {
+        width: 90%;
+        flex-direction: column;
     }
 
-    section{
-        display: flex;
-        position: relative;
+    .optionsNav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
         flex-direction: column;
         align-items: center;
-        gap:30px;
-        height: auto;
-        justify-content: space-between;
-        margin: 40px 0;
+        gap: 20px;
     }
 
-    .about{
-        width: 60%;
+    .about {
+        width: 70%;
     }
 
-    article{
-        margin-top: 30%;
+    #developers {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        position: static;
+        width: 120px;
+        height: 120px;
+        margin: 20px auto;
     }
 
+    nav {
+        width: 95%;
+        padding: 15px;
+    }
 
-    footer{
-        text-align: center;
+    .exibitionCard {
+        width: 95%;
+    }
+
+    .ICIText {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .about {
+        width: 90%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 20px;
     }
 }
