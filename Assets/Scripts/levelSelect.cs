@@ -20,6 +20,12 @@ public class levelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(Preparing());
+    }
+
+    IEnumerator Preparing()
+    {
+        yield return new WaitForEndOfFrame();
         InstanceButtons();
     }
 
@@ -37,19 +43,10 @@ public class levelSelect : MonoBehaviour
             Transform container = j >= 6 ? world2cont : world1cont;
             GameObject but = Instantiate(btnPrefab, container);
 
-            Animator anim = but.GetComponentInChildren<Animator>();
-
-            if (anim == null)
-            {
-                anim.enabled = true;
-                anim.Rebind();
-                anim.Update(0f);
-            }
-
             if (j<targets.Length+1)
-                but.transform.position = targets[j-1].position;
+                but.GetComponent<RectTransform>().anchoredPosition = targets[j-1].GetComponent<RectTransform>().anchoredPosition;
             else
-                but.transform.position = targets[j-6].position;
+                but.GetComponent<RectTransform>().anchoredPosition = targets[j-6].GetComponent<RectTransform>().anchoredPosition;
 
             if (j == 1)
                 EventSystem.current.SetSelectedGameObject(but);
