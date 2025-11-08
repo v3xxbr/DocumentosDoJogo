@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveInput: {x: 0, y: 0}
   foot: {fileID: 762812585}
-  footRadius: 0.1
+  footRadius: 0.2
   ground:
     serializedVersion: 2
     m_Bits: 256
