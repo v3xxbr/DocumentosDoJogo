@@ -178,8 +178,9 @@ article{
 }
 
 #developers li{
-    margin: 15px 0;
+    margin: 20px 0;
     color: blue;
+    list-style: none;
 }
 
 .btn{
@@ -194,19 +195,20 @@ article{
     
 
 }
-    .btn-1{
-        color:black;
-        background-color: red;
-        border-radius: 10px;
-        border-bottom: 5px solid rgb(189, 0, 0);
-        transition: transform 0.5s;
-    }
-    .btn-1:hover{
-        background-color: rgb(253, 58, 58);
-        box-shadow: 0px 0px 20px rgb(100, 0, 0);
-        transform: translate(0px, -5px);
-        transition: transform 0.5s;
-    }
+.btn-1{
+    color:black;
+    background-color: red;
+    border-radius: 10px;
+    border-bottom: 5px solid rgb(189, 0, 0);
+    transition: transform 0.5s;
+}
+
+.btn-1:hover{
+    background-color: rgb(253, 58, 58);
+    box-shadow: 0px 0px 20px rgb(100, 0, 0);
+    transform: translate(0px, -5px);
+    transition: transform 0.5s;
+}
 
 
 
