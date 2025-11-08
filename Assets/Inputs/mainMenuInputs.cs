@@ -123,6 +123,17 @@ public partial class @MainMenuInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""94cd1935-3134-4802-a430-adc5ffbcd22a"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""ByGamepad"",
                     ""id"": ""db2fe5bb-72b7-4513-9227-208200e0275a"",
                     ""path"": ""2DVector"",

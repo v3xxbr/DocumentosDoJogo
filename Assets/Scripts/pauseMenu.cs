@@ -9,7 +9,6 @@ using UnityEngine.EventSystems;
 public class pauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuobj;
-    public GameObject optionsMenu;
     private GameObject player;
 
     // Start is called before the first frame update
@@ -33,14 +32,18 @@ public class pauseMenu : MonoBehaviour
         {
             pauseMenuobj.SetActive(true);
             Time.timeScale = 0f;
-            player.GetComponent<PlayerInput>().actions.Disable();
+
+            if(player != null)
+                player.GetComponent<PlayerInput>().actions.Disable();
         }
 
         else
         {
             pauseMenuobj.SetActive(false);
             Time.timeScale = 1f;
-            player.GetComponent<PlayerInput>().actions.Enable();
+
+            if(player != null)
+                player.GetComponent<PlayerInput>().actions.Enable();
         }
     }
 
@@ -49,11 +52,6 @@ public class pauseMenu : MonoBehaviour
         pauseMenuobj.SetActive(false);
         Time.timeScale = 1f;
         player.GetComponent<PlayerInput>().actions.Enable();
-    }
-
-    public void Options()
-    {
-        optionsMenu.SetActive(!optionsMenu.activeSelf);
     }
 
     public void MainManu()

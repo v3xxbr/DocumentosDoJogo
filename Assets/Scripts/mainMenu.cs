@@ -74,9 +74,7 @@ public class mainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        for (int k = 1; k < levelSelect.levelQuant + 1; ++k)
-            PlayerPrefs.DeleteKey("Level"+k+"Unlocked");
-
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Level1Unlocked", 1);
         PlayerPrefs.Save();
 

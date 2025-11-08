@@ -324,6 +324,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spin
       objectReference: {fileID: 0}
+    - target: {fileID: 3058079942416722550, guid: 58974c7f7d16dec4b85113ce86c36c9a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058079942416722550, guid: 58974c7f7d16dec4b85113ce86c36c9a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058079942416722550, guid: 58974c7f7d16dec4b85113ce86c36c9a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58974c7f7d16dec4b85113ce86c36c9a, type: 3}
 --- !u!4 &259188843 stripped
@@ -1252,6 +1264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3919578252267367486, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
+      propertyPath: raycastLength
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1262,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.33
+      value: -3.355
       objectReference: {fileID: 0}
     - target: {fileID: 4943868563514832754, guid: dafed19ac7af6ce4b8dc184698e40d54, type: 3}
       propertyPath: m_LocalPosition.z

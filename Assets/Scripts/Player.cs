@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     [Header("Foot")]
     [SerializeField]private Transform foot;
-    [SerializeField]private float footRadius=0.2f;
+    [SerializeField] float footRadius = 0.1f;
     [SerializeField]private LayerMask ground;
 
     public enum stages{
@@ -58,12 +58,14 @@ public class Player : MonoBehaviour
 
     public void Move(InputAction.CallbackContext value)
     {
+        if (currentStage == stages.Dead) return;
         moveInput = value.ReadValue<Vector2>();
         currentStage = stages.Running;
     }
 
     public void Jump(InputAction.CallbackContext value)
     {
+        if (currentStage == stages.Dead) return;
         if (value.started && !isJumping)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
 
     private void Animations()
     {
+        if (currentStage == stages.Dead) return;
         if (isJumping)
           anim.SetInteger("transition", 2);
 
@@ -88,12 +91,20 @@ public class Player : MonoBehaviour
 
     public IEnumerator Dead()
     {
-        yield return new WaitForSeconds(0.1f);
+        currentStage = stages.Dead;
+        gameObject.GetComponent<PlayerInput>().DeactivateInput();
+        rb.velocity = Vector2.zero;
+        rb.simulated = false;
+
+        anim.SetInteger("transition", 3);
+        anim.Update(0f);
+        yield return new WaitForSeconds(0.5f);
+
         gameObject.SetActive(false);
         ++deathCount.deathTimes;
         deathCount.itsover = true;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        gameObject.SetActive(true);
     }
 
     void OnCollisionEnter2D(Collision2D other)

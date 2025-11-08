@@ -27,6 +27,8 @@ public class levelSelect : MonoBehaviour
 
     void InstanceButtons()
     {
+        if (btnPrefab == null) return;
+
         for (int j = 1; j < levelQuant+1; ++j)
         {
             int confid = (j==1) ? 1:0;
@@ -34,6 +36,15 @@ public class levelSelect : MonoBehaviour
 
             Transform container = j >= 6 ? world2cont : world1cont;
             GameObject but = Instantiate(btnPrefab, container);
+
+            Animator anim = but.GetComponentInChildren<Animator>();
+
+            if (anim == null)
+            {
+                anim.enabled = true;
+                anim.Rebind();
+                anim.Update(0f);
+            }
 
             if (j<targets.Length+1)
                 but.transform.position = targets[j-1].position;
@@ -52,8 +63,13 @@ public class levelSelect : MonoBehaviour
             //Lambdas guardam variáveis, não valores, assim, caso 'levelName' fosse usado diretamente, por ser um valor variável, a Lambda só leria o último
             string currentName = levelName;
             Button btn = but.GetComponent<Button>();
-            btn.onClick.AddListener(() => { SceneManager.LoadScene(currentName); });
+            btn.onClick.AddListener(delegate { LoadLevel(currentName); });
         }
+    }
+
+    void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 
     public void ChangeWorld()

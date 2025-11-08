@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class walkSpin : MonoBehaviour
 {
+    [Header("Componnents")]
     public float speed=2f;
     public Sensor stckSensor;
+
     bool isRunning=false;
+    [SerializeField]float smallOffside=0.2f;
+
+    [Header("Targets")]
     public GameObject[] targets;
+    public Transform endLevelfinalPos;
     int j;
 
     // Start is called before the first frame update
@@ -17,7 +23,12 @@ public class walkSpin : MonoBehaviour
         stckSensor.detection += startRun;
     }
 
-    // Update is called once per frame
+
+    private void Update()
+    {
+
+    }
+
     void startRun()
     {
         if (!isRunning)
@@ -27,6 +38,8 @@ public class walkSpin : MonoBehaviour
     IEnumerator Running()
     {
         isRunning = true;
+        Rigidbody2D rbb = GetComponent<Rigidbody2D>();
+        SpriteRenderer spr = GetComponent<SpriteRenderer>();
 
         if(j+1 < targets.Length)
         {
@@ -37,11 +50,22 @@ public class walkSpin : MonoBehaviour
         Debug.Log("Animação de Levantando");
         yield return new WaitForSeconds(1f);
 
-        while (Vector2.Distance(targets[j].transform.position,transform.position) > 0.01f)
+        transform.position += new Vector3(0f, smallOffside, 0f);
+
+        gameObject.GetComponent<Animator>().SetBool("Run", true);
+
+        while (Vector2.Distance(targets[j].transform.position,transform.position) > 0.05f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targets[j].transform.position, speed * Time.deltaTime);
-            yield return null;
+            rbb.MovePosition(Vector2.MoveTowards(rbb.position, targets[j].transform.position, speed * Time.fixedDeltaTime));
+            float direction = Mathf.Sign(targets[j].transform.position.x - rbb.position.x);
+            if (direction != 0)
+                spr.flipX = direction > 0;
+
+            yield return new WaitForFixedUpdate();
         }
+
+        gameObject.GetComponent<Animator>().SetBool("Run", false);
+        transform.position -= new Vector3(0f, smallOffside, 0f);
 
         if (j < targets.Length-1)
             ++j;
@@ -50,18 +74,13 @@ public class walkSpin : MonoBehaviour
         {
             GameObject EndLevel = GameObject.FindGameObjectWithTag("EndLevel");
 
-            //formulando a queda
-            EndLevel.GetComponent<BoxCollider2D>().isTrigger = false;
-            EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            EndLevel.GetComponent<Rigidbody2D>().gravityScale = 1f;
-
-            yield return new WaitForSeconds(1.4f);
-            //depois da queda
-            EndLevel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            EndLevel.GetComponent<BoxCollider2D>().isTrigger = true;
-            yield break;
+            while(Vector2.Distance(endLevelfinalPos.position, EndLevel.transform.position) > 0.05f)
+            {
+                Vector3 desiredPos = new Vector3(EndLevel.transform.position.x, endLevelfinalPos.position.y);
+                EndLevel.transform.position = Vector3.MoveTowards(EndLevel.transform.position, desiredPos, speed*Time.deltaTime);
+                yield return null;
+            }
         }
-
         isRunning = false;
     }
 }
