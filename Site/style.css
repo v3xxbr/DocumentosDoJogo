@@ -31,7 +31,6 @@ body{
     background-size: contain;
     width: 170px;
     justify-content: center;
-    height: 170px;
     display: flex;
 }
 
@@ -251,6 +250,24 @@ footer{
         flex-direction: column;
     }
 
+    .ICImg{
+        width: 100%;
+        flex:none;
+    }
+
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+    min-height: 220px;
+    height: 220px;
+    }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantém imagem preenchendo sem distorcer */
+  }
+
     .ICIText {
         width: 90%;
         text-align: center;
@@ -271,6 +288,17 @@ footer{
         flex-direction: column;
         gap: 10px;
     }
+
+   .ICImg, .swiper {
+    min-height: 250px; 
+    height: auto;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain;
+  }
 
     section {
         flex-direction: column;
