@@ -265,7 +265,7 @@ footer{
   .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* mantém imagem preenchendo sem distorcer */
+    object-fit: cover;
   }
 
     .ICIText {
