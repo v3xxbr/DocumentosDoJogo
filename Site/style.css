@@ -35,8 +35,6 @@ body{
     display: flex;
 }
 
-
-
 nav{
     position: relative;
     width: 60%;
@@ -70,8 +68,6 @@ nav{
     color: black;
     font-size: 12px;
 }
-
-
 
 .dropdown{
     position: relative;
@@ -119,6 +115,8 @@ nav{
 
 .ICImg{
     flex: 1 1 60%;
+    min-height: 300px;
+    overflow: hidden;
 }
 
 .ICImg img{
@@ -159,6 +157,23 @@ section{
     margin-bottom: 15px;
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; 
+    background-color: whitesmoke;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.swiper-slide {
+    background-color: whitesmoke;
+}
 
 article{
     display: flex;
