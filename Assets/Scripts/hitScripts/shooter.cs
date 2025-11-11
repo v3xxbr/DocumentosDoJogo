@@ -9,7 +9,7 @@ public class shooter : MonoBehaviour
     public Transform shootingArea;
     public int direction;
 
-    private button buttonz;
+    public button buttonz;
 
     [SerializeField]float speed;
     [SerializeField] float time;
@@ -35,9 +35,7 @@ public class shooter : MonoBehaviour
 
     IEnumerator Shooting()
     {
-        itsHappening = true;
-
-        while (itsHappening)
+        while (buttonz.itHappened == false)
         {
             yield return new WaitForSeconds(time);
             GameObject projectileNow = Instantiate(projectile, shootingArea.position, Quaternion.identity);
@@ -48,14 +46,12 @@ public class shooter : MonoBehaviour
                 case 4: projectileNow.GetComponent<Rigidbody2D>().AddForce(Vector2.left * speed, ForceMode2D.Impulse); break;
             }
 
-            Destroy(projectileNow, 2f);
+            Destroy(projectileNow, 3f);
         }
     }
 
     void StopShooting()
     {
-        itsHappening = false;
-
         StartCoroutine(Down());
     }
 

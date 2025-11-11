@@ -34,6 +34,9 @@ public class move : MonoBehaviour
 
     IEnumerator moving()
     {
+        if (gameObject.GetComponent<upAndDown>() != null)
+            gameObject.GetComponent<upAndDown>().enabled = false;
+
         switch (dir)
         {
             case 1: direction = Vector2.up; break;

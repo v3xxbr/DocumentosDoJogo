@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6387985a9cff440871d219b067d5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorWidth: 1.71
+  sensorWidth: 1.91
   sensorHeight: 8.14
 --- !u!1001 &674485165
 PrefabInstance:
